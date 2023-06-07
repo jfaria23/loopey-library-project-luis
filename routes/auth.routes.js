@@ -109,6 +109,14 @@ router.post("/login", (req, res, next) => {
     });
 });
 
+//POST /logout
+router.post("/logout", (req, res, next) => {
+  req.session.destroy((err) => {
+    if (err) next(err);
+    res.redirect("/");
+  });
+});
+
 //GET user-profile
 router.get("/user-profile", (req, res) =>
   res.render("auth/user-profile", { userDetails: req.session.currentUser })
