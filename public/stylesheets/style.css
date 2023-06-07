@@ -27,3 +27,10 @@ nav a {
 nav a:last-child {
   border-right: none;
 }
+
+.warning {
+  font-weight: bold;
+  border: 1px solid orange;
+  padding: 1rem;
+  background-color: #b1be6b;
+}
